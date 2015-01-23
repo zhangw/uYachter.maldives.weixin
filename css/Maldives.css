@@ -1,0 +1,120 @@
+﻿body {
+    margin:0;
+}
+.swiper-container {
+  text-align: center;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  left: 10px;
+  top: 10px;
+}
+
+.swiper-pagination-switch {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 0px 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.swiper-active-switch {
+  background: #fff;
+}
+
+.page1-slide {
+  background:url("../images/page 1.jpg") no-repeat;
+ 
+  background-size: 100% 100%;
+}
+
+.page2-slide {
+  background:url("../images/page 2.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page3-slide {
+  background:url("../images/page 3.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page4-slide {
+  background:url("../images/page 4.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page5-slide {
+  background:url("../images/page 5.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page6-slide {
+  background:url("../images/page 6.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page7-slide {
+  background:url("../images/page 7.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page8-slide {
+  background:url("../images/page 8.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page9-slide {
+  background:url("../images/page 9.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page10-slide {
+  background:url("../images/page 10.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page11-slide {
+  background:url("../images/page 11.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page12-slide {
+  background:url("../images/page 12.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page13-slide {
+  background:url("../images/page 13.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+/*引导用户可以向上划动*/
+.up {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 10px;
+    left: 50%;
+    bottom:50px;
+    margin: 0 0 0 -10px;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    -moz-animation: start 1.5s infinite ease-in-out;
+    -o-animation: start 1.5s infinite ease-in-out;
+    -ms-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}
+@-webkit-keyframes start{0%{opacity:0; -webkit-transform:translate(0,10px);}50%{opacity:1; -webkit-transform:translate(0,-5px);}100%{opacity:0; -webkit-transform:translate(0,-15px);}}
+@-moz-keyframes start{0%{opacity:0; -moz-transform:translate(0,10px);}50%{opacity:1; -moz-transform:translate(0,-5px);}100%{opacity:0; -moz-transform:translate(0,-15px);}}
+@-o-keyframes start{0%{opacity:0; -o-transform:translate(0,10px);}50%{opacity:1; -o-transform:translate(0,-5px);}100%{opacity:0; -o-transform:translate(0,-15px);}}
+@-ms-keyframes start{0%{opacity:0; -ms-transform:translate(0,10px);}50%{opacity:1; -ms-transform:translate(0,-5px);}100%{opacity:0; -ms-transform:translate(0,-15px);}}
+@keyframes start{0%{opacity:0; transform:translate(0,10px);}50%{opacity:1; transform:translate(0,-5px);}100%{opacity:0; transform:translate(0,-15px);}}
+
+.music {
+    position: absolute;
+    top:20px;
+    right:30px;
+}

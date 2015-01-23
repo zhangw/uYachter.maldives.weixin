@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>悠艇客开启您的马尔代夫之旅</title>
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/Maldives.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div id="start" class="swiper-slide page1-slide">
+                    </div>
+                    <div class="swiper-slide page2-slide">
+                    </div>
+                    <div class="swiper-slide page3-slide">
+                    </div>
+                    <div class="swiper-slide page4-slide">
+                    </div>
+                    <div class="swiper-slide page5-slide">
+                    </div>
+                    <div class="swiper-slide page6-slide">
+                    </div>
+                    <div class="swiper-slide page7-slide">
+                    </div>
+                    <div class="swiper-slide page8-slide">
+                    </div>
+                    <div class="swiper-slide page9-slide">
+                    </div>
+                    <div class="swiper-slide page10-slide">
+                    </div>
+                    <div class="swiper-slide page11-slide">
+                    </div>
+                    <div class="swiper-slide page12-slide">
+                    </div>
+                    <div id="end" class="swiper-slide page13-slide">
+                    </div>
+                </div>
+                <div class="up"><img src="./images/up.png"/></div>
+                <div class="music"><img src="./images/music.png"/></div>
+                <!--
+                    <div class="pagination">
+                    <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+                    <span class="swiper-pagination-switch"></span>
+                    <span class="swiper-pagination-switch"></span></div>
+                -->
+            </div>
+        </div>
+    </div>
+    <audio id="soundplayer" src="mp3/Coldplay - A Sky Full Of Stars.mp3" autoplay="autoplay" display="none"></audio>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/idangerous.swiper-2.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+		//初始化Contain高度
+		$('.swiper-container').css('height', $(window).height())
+		var mySwiper = new Swiper('.swiper-container', {
+		//pagination: '.pagination',
+		mode: 'vertical',
+		onSlideChangeStart: function (swiper) {
+			if ($('.swiper-slide-visible').attr('id') == 'end') {
+				$('.up').hide()
+			}else { $('.up').show() }
+			}
+		});
+		var soundHandle = document.getElementById('soundplayer');
+		window.addEventListener('touchstart', function (e) {
+				//debugger;
+				//soundHandle.loop = true;
+				if(soundHandle.paused)
+					soundHandle.play();
+				//soundHandle.pause();
+			});
+		});
+</script>
+</body>
+</html>
