@@ -1,4 +1,9 @@
 $(document).ready(function(){
+  var audio = new Audio();
+  audio.autoplay = true;
+  audio.src = "mp3/Coldplay - A Sky Full Of Stars.mp3"; 
+  audio.load();
+
   var $loading = $("#loading");
   var $loading_text = $("#loading_text");
   var funcLoading = function(){
@@ -34,13 +39,12 @@ $(document).ready(function(){
         }else { $('.up').show() }
       }
     });
-    var soundHandle = document.getElementById('soundplayer');
     window.addEventListener('touchstart', function (e) {
       //debugger;
-      //soundHandle.loop = true;
-      if(soundHandle.paused)
-        soundHandle.play();
-      //soundHandle.pause();
+      //audio.loop = true;
+      if(audio.paused)
+        audio.play();
+      //audio.pause();
     });
     $loading.fadeOut(1000);
   });
