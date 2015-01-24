@@ -1,8 +1,6 @@
 $(document).ready(function(){
   var audio = new Audio();
   audio.autoplay = true;
-  audio.src = "mp3/Coldplay - A Sky Full Of Stars.mp3"; 
-  audio.load();
 
   var $loading = $("#loading");
   var $loading_text = $("#loading_text");
@@ -39,11 +37,19 @@ $(document).ready(function(){
         }else { $('.up').show() }
       }
     });
+    audio.src = "mp3/Coldplay - A Sky Full Of Stars.mp3"; 
+    audio.load(); 
     window.addEventListener('touchstart', function (e) {
       //debugger;
       //audio.loop = true;
-      if(audio.paused)
-        audio.play();
+      if(audio){
+        if(audio.src){
+          if(audio.paused)
+            audio.play();
+        }
+        else{
+        }
+      }
       //audio.pause();
     });
     $loading.fadeOut(1000);
