@@ -1,11 +1,11 @@
 $(document).ready(function(){
   var audio = new Audio();
   audio.autoplay = true;
-
+  console.log(new Date());
   var $loading = $("#loading");
   var $loading_text = $("#loading_text");
   var funcLoading = function(){
-    var imgs = ['page 1.jpg','page 2.jpg','page 3.jpg','page 4.jpg','page 5.jpg','page 6.jpg','page 7.jpg','page 8.jpg','page 9.jpg','page 1.jpg','page 2.jpg','page 3.jpg','page 4.jpg','page 5.jpg','page 6.jpg','page 7.jpg','page 8.jpg','page 9.jpg','page 10.jpg','page 11.jpg','page 12.jpg','page 13.jpg'],
+    var imgs = ['page 1.jpg','page 2.jpg','page 3.jpg','page 4.jpg','page 5.jpg','page 6.jpg','page 7.jpg','page 8.jpg','page 9.jpg','page 10.jpg','page 11.jpg','page 12.jpg','page 13.jpg'],
     imgs_len = imgs.length,
     imgs_loaded_len = 0;
     var funcImgsLoad = function(e) {
@@ -18,7 +18,7 @@ $(document).ready(function(){
     var cb = function(){};
     var s = 60;//unit second
     var o = function() {
-      0 >= s ? imgs_loaded_len / imgs_len > 0.5 ? cb() : alert("你的网速不太给力哦!")
+      0 >= s ? imgs_loaded_len / imgs_len > 0.5 ? cb() : alert("你的网速不太给力哦,试试重新刷新!")
       : (s -= .5, imgs_loaded_len == imgs_len ? cb() : setTimeout(o, 500))
     };//0.5s检测一次,图片要么在固定秒内加载完成,要么超过半数,可以执行后续的初始化函数(作为参数传递).
     return function(e) {
@@ -52,6 +52,7 @@ $(document).ready(function(){
       }
       //audio.pause();
     });
+    console.log(new Date());
     $loading.fadeOut(1000);
   });
 });
