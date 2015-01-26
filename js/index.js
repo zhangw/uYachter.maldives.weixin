@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var audio = new Audio();
-  audio.autoplay = true;
+  audio.autoplay = "autoplay";
   var startPlay = false;
   var startInitSwiper = false;
   var imgs_loaded = {};
@@ -87,7 +87,8 @@ $(document).ready(function(){
       }
       else{//确定iphone.png被加载后,再显示动画.
         funcInterval = setInterval(function(){
-          if($('#content').css('display')=='none' && imgs_loaded['iphone_loaded']){
+          //TODO:有时候会出现imgs_loaded['loaded']==true但是imgs_loaded['iphone_loaded']==false的情况..
+          if($('#content').css('display')=='none' && (imgs_loaded['iphone_loaded'] || imgs_loaded['loaded'])){
             $('.lock_wrp').fadeIn(500);
             clearInterval(funcInterval);
           }

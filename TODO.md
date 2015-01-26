@@ -14,4 +14,9 @@
  - 横竖屏的检测和效果
   1.控制了横竖屏时页面效果的切换以及音乐的播放/暂停
  - 如何使用parallax.js?
+  1.http://www.gbtags.com/gb/demoviewer/1832/bad6eb62-e5f8-4d07-9aa0-190aab188601/jquery.html.htm
+  2.http://matthew.wagerfield.com/parallax/
+  3.https://github.com/wagerfield/parallax
  - 音乐播放/暂停的按钮效果
+ - 有时候出现横屏幕页面动画不显示,页面空白的bug
+ - 手机上音乐不能播放的bug
