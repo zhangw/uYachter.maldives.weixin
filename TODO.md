@@ -3,6 +3,7 @@
   2. 本人的家庭宽带/电信3g/公司网络测试,CDN加速效果几乎没有(尤其是mp3)
  - loading的效果放在下载大部分的JS/css库之前
   1. 进行了优化,mp3在图片之后加载,加速了约10s
+  2. 查看百度音乐的mp3播放效果,了解更多的播放控制细节
  - 开启nginx对其他资源的gzip
   1. 默认nginx对css/js/图片关闭gzip,开启后加速了约1s
   2. mp3的gzip压缩没有生效
@@ -22,3 +23,6 @@
   1. 暂时修复,修改了iphone.png加载完成的逻辑
  - 手机上音乐不能播放的bug
   1. 已修复,手机微信(iphone/android)打开页面,请求mp3文件时,user-agent并没有发送MicroMessenger标识,因此nginx配置对mp3的请求不做user-agent的过滤
+ - 微信的接口调用,朋友圈分享/获取用户基本信息
+ - 使用zepto.js替换jQuery
+ - 测试浏览器对同一个域名下资源的并发请求限制,将资源放在不同的CDN上
