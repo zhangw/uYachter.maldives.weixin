@@ -26,3 +26,6 @@
  - 微信的接口调用,朋友圈分享/获取用户基本信息
  - 使用zepto.js替换jQuery
  - 测试浏览器对同一个域名下资源的并发请求限制,将资源放在不同的CDN上
+ - 两个自动播放音乐的微页面,参考
+  1.http://weixin.ihuizhi.com/best/heka/10007.php?share=1/154&from=timeline&isappinstalled=0?share=1&music=mp3/women/women_1.mp3
+  2.http://eqxiu.com/s/ooVqxN?from=timeline&isappinstalled=0#rd
